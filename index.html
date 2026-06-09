@@ -1,152 +1,230 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Help your Friends get back on Instagram</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    @import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
-    body { font-family: 'Inter', sans-serif; }
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Request Help From Friends</title>
 
-    /* Gradient button */
-    .btn-next {
-      background: linear-gradient(90deg, #405DE6, #5851DB, #833AB4, #C13584, #E1306C, #FD1D1D);
-      background-size: 200% 200%;
-      animation: gradientShift 4s ease infinite;
+<script src="https://cdn.tailwindcss.com"></script>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
+body{
+    font-family:'Inter',sans-serif;
+}
+
+.fade-in{
+    animation:fadeIn .4s ease;
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(8px);
     }
-    @keyframes gradientShift {
-      0% { background-position: 0% 50%; }
-      50% { background-position: 100% 50%; }
-      100% { background-position: 0% 50%; }
+    to{
+        opacity:1;
+        transform:translateY(0);
     }
-  </style>
+}
+</style>
 </head>
-<body class="min-h-screen bg-gradient-to-br from-purple-100 via-pink-50 to-blue-100 flex items-center justify-center p-4 sm:p-8">
 
-  <!-- Main Container -->
-  <div class="w-full max-w-lg bg-white rounded-3xl shadow-xl p-8 sm:p-10 border border-gray-100">
-    
-    <!-- Hero illustration -->
-    <div class="flex justify-center pb-4">
-      <svg width="130" height="110" viewBox="0 0 130 110" fill="none">
-        <!-- Left face -->
-        <circle cx="42" cy="58" r="28" fill="white" stroke="#DBDBDB" stroke-width="2"/>
-        <!-- Left eyes -->
-        <circle cx="35" cy="52" r="3" fill="#262626"/>
-        <circle cx="49" cy="52" r="3" fill="#262626"/>
-        <!-- Left smile -->
-        <path d="M34 64 Q42 72 50 64" stroke="#262626" stroke-width="2" stroke-linecap="round" fill="none"/>
+<body class="bg-white min-h-screen">
 
-        <!-- Right face -->
-        <circle cx="88" cy="58" r="28" fill="white" stroke="#DBDBDB" stroke-width="2"/>
-        <!-- Right eyes -->
-        <circle cx="81" cy="52" r="3" fill="#262626"/>
-        <circle cx="95" cy="52" r="3" fill="#262626"/>
-        <!-- Right smile -->
-        <path d="M80 64 Q88 72 96 64" stroke="#262626" stroke-width="2" stroke-linecap="round" fill="none"/>
+<!-- Screen Container -->
+<div class="max-w-md mx-auto min-h-screen flex flex-col px-6">
 
-        <!-- Shield/checkmark badge (center overlap) -->
-        <g transform="translate(52, 28)">
-          <defs>
-            <linearGradient id="shieldGrad" x1="0%" y1="0%" x2="100%" y2="100%">
-              <stop offset="0%" style="stop-color:#833AB4"/>
-              <stop offset="50%" style="stop-color:#E1306C"/>
-              <stop offset="100%" style="stop-color:#F77737"/>
-            </linearGradient>
-          </defs>
-          <path d="M13 2 L24 6 L24 18 Q24 26 13 30 Q2 26 2 18 L2 6 Z" fill="url(#shieldGrad)"/>
-          <!-- Checkmark -->
-          <path d="M7 16 L11 21 L20 11" stroke="white" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" fill="none"/>
-        </g>
+    <!-- Header -->
+    <header class="h-14 flex items-center">
+        <button class="p-1">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+                <path
+                    d="M15 18L9 12L15 6"
+                    stroke="#262626"
+                    stroke-width="2.4"
+                    stroke-linecap="round"
+                    stroke-linejoin="round"
+                />
+            </svg>
+        </button>
+    </header>
 
-        <!-- Sparkle lines around the shield -->
-        <line x1="65" y1="10" x2="65" y2="4" stroke="#C13584" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="80" y1="14" x2="84" y2="10" stroke="#C13584" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="50" y1="14" x2="46" y2="10" stroke="#C13584" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="84" y1="30" x2="90" y2="30" stroke="#C13584" stroke-width="1.5" stroke-linecap="round"/>
-        <line x1="46" y1="30" x2="40" y2="30" stroke="#C13584" stroke-width="1.5" stroke-linecap="round"/>
-      </svg>
-    </div>
+    <!-- Main Content -->
+    <main class="flex-1 fade-in">
 
-    <!-- Title -->
-    <div class="text-center mb-8">
-      <h1 class="text-2xl sm:text-3xl font-bold text-gray-900 tracking-tight leading-tight">Help your Friends get back on Instagram</h1>
-    </div>
+        <!-- Illustration -->
+        <div class="flex justify-center mt-3 mb-8">
 
-    <!-- How this works section -->
-    <div class="space-y-6">
-      <h2 class="text-base font-bold text-gray-900 text-center tracking-wide uppercase">How this works</h2>
+            <svg width="118" height="92" viewBox="0 0 118 92" fill="none">
 
-      <!-- Step 1 -->
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-purple-50 rounded-xl">
-          <!-- Keyhole/Login Icon -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M15 3h4a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2h-4" />
-            <polyline points="10 17 15 12 10 7" />
-            <line x1="15" y1="12" x2="3" y2="12" />
-          </svg>
+                <!-- sparkles -->
+                <line x1="59" y1="2" x2="59" y2="8" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"/>
+                <line x1="28" y1="20" x2="32" y2="24" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"/>
+                <line x1="86" y1="20" x2="82" y2="24" stroke="#D1D5DB" stroke-width="2" stroke-linecap="round"/>
+
+                <!-- Left face -->
+                <circle cx="36" cy="46" r="19" fill="white" stroke="#262626" stroke-width="2"/>
+                <circle cx="30" cy="42" r="1.8" fill="#262626"/>
+                <circle cx="42" cy="42" r="1.8" fill="#262626"/>
+                <path d="M30 51C32 54 35 55 36 55C37 55 40 54 42 51"
+                    stroke="#262626"
+                    stroke-width="2"
+                    stroke-linecap="round"/>
+
+                <!-- Right face -->
+                <circle cx="82" cy="46" r="19" fill="white" stroke="#262626" stroke-width="2"/>
+                <circle cx="76" cy="42" r="1.8" fill="#262626"/>
+                <circle cx="88" cy="42" r="1.8" fill="#262626"/>
+                <path d="M76 51C78 54 81 55 82 55C83 55 86 54 88 51"
+                    stroke="#262626"
+                    stroke-width="2"
+                    stroke-linecap="round"/>
+
+                <!-- Shield -->
+                <g transform="translate(46,20)">
+                    <path
+                        d="M13 3L23 7V18C23 25 18.5 30 13 33C7.5 30 3 25 3 18V7L13 3Z"
+                        fill="white"
+                        stroke="#A855F7"
+                        stroke-width="2.2"
+                    />
+                    <path
+                        d="M8.5 17L12 20.5L18.5 13"
+                        stroke="#EF4444"
+                        stroke-width="2.4"
+                        stroke-linecap="round"
+                        stroke-linejoin="round"
+                    />
+                </g>
+            </svg>
+
         </div>
-        <div class="pt-1">
-          <p class="text-[14.5px] font-medium text-gray-800 leading-snug">
-            Login into your account here
-          </p>
+
+        <!-- Title -->
+        <div class="text-center mb-3">
+            <h1 class="text-[30px] leading-[34px] font-bold text-[#262626]">
+                Request help from friends
+            </h1>
         </div>
-      </div>
 
-      <!-- Divider -->
-      <div class="border-b border-gray-100"></div>
-
-      <!-- Step 2 -->
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-pink-50 rounded-xl">
-          <!-- User Selector Icon -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2" />
-            <circle cx="9" cy="7" r="4" />
-            <path d="M23 21v-2a4 4 0 0 0-3-3.87" />
-            <path d="M16 3.13a4 4 0 0 1 0 7.75" />
-          </svg>
+        <!-- Subtitle -->
+        <div class="max-w-[290px] mx-auto text-center mb-12">
+            <p class="text-[15px] leading-6 text-[#8E8E8E]">
+                Send a request to friends to help you get back into your account.
+            </p>
         </div>
-        <div class="pt-1">
-          <p class="text-[14.5px] font-medium text-gray-800 leading-snug">
-            Select the friends who need help getting back on their account
-          </p>
+
+        <!-- How It Works -->
+        <div>
+
+            <h2 class="text-center font-bold text-[22px] text-[#262626] mb-8">
+                How this works
+            </h2>
+
+            <div class="space-y-8">
+
+                <!-- Step 1 -->
+                <div class="flex items-start gap-5">
+
+                    <div class="w-7 shrink-0 mt-1">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                            <circle cx="8.5" cy="12" r="4.5"
+                                stroke="#262626"
+                                stroke-width="2"/>
+                            <path d="M13 12H21"
+                                stroke="#262626"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                            <path d="M18 9L21 12L18 15"
+                                stroke="#262626"
+                                stroke-width="2"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <p class="text-[15px] leading-6 text-[#262626]">
+                        Enter a previous password that you've used to access this account.
+                    </p>
+
+                </div>
+
+                <!-- Step 2 -->
+                <div class="flex items-start gap-5">
+
+                    <div class="w-7 shrink-0 mt-1">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                            <path d="M17 21V19C17 16.8 15.2 15 13 15H5C2.8 15 1 16.8 1 19V21"
+                                stroke="#262626"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                            <circle cx="9" cy="7" r="4"
+                                stroke="#262626"
+                                stroke-width="2"/>
+                            <path d="M20 8V14"
+                                stroke="#262626"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                            <path d="M17 11H23"
+                                stroke="#262626"
+                                stroke-width="2"
+                                stroke-linecap="round"/>
+                        </svg>
+                    </div>
+
+                    <p class="text-[15px] leading-6 text-[#262626]">
+                        Choose 2 friends on Instagram who can confirm your identity. They won't have access to your account.
+                    </p>
+
+                </div>
+
+                <!-- Step 3 -->
+                <div class="flex items-start gap-5">
+
+                    <div class="w-7 shrink-0 mt-1">
+                        <svg width="26" height="26" viewBox="0 0 24 24" fill="none">
+                            <path d="M22 16.92V19.92C22 20.47 21.55 20.92 21 20.92C10.51 20.92 2 12.41 2 1.92C2 1.37 2.45 0.92 3 0.92H6C6.55 0.92 7 1.37 7 1.92V5.42L4.5 6.92C5.7 10.2 8.3 12.8 11.58 14L13.08 11.5H16.58C17.13 11.5 17.58 11.95 17.58 12.5V15.5"
+                                stroke="#262626"
+                                stroke-width="1.8"
+                                stroke-linecap="round"
+                                stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+
+                    <p class="text-[15px] leading-6 text-[#262626]">
+                        We recommend you call or text both friends to let them know it's actually you who sent the request.
+                    </p>
+
+                </div>
+
+            </div>
+
         </div>
-      </div>
 
-      <!-- Divider -->
-      <div class="border-b border-gray-100"></div>
+    </main>
 
-      <!-- Step 3 -->
-      <div class="flex items-start gap-4">
-        <div class="flex-shrink-0 w-10 h-10 flex items-center justify-center bg-blue-50 rounded-xl">
-          <!-- Message Code Icon -->
-          <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="#262626" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
-            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z" />
-            <path d="M8 10h.01M12 10h.01M16 10h.01" />
-          </svg>
+    <!-- Footer -->
+    <footer class="pb-8">
+
+        <div class="border-t border-[#DBDBDB] pt-6">
+
+            <button
+                class="w-full h-11 bg-[#0095F6] hover:bg-[#1877F2] transition rounded-lg text-white text-[15px] font-semibold">
+                Next
+            </button>
+
+            <button
+                class="w-full mt-5 text-[#0095F6] text-[15px] font-semibold">
+                Try another way
+            </button>
+
         </div>
-        <div class="pt-1">
-          <p class="text-[14.5px] font-medium text-gray-800 leading-snug">
-            Get the code to help them login and send it to them via text or WhatsApp
-          </p>
-        </div>
-      </div>
-    </div>
 
-    <!-- Action Buttons -->
-    <div class="mt-10 space-y-3">
-      <button class="btn-next w-full py-4 rounded-xl text-white font-semibold text-[15px] tracking-wide shadow-md transition transform active:scale-95">
-        Next
-      </button>
-      <button class="w-full py-3 text-[#0095F6] font-semibold text-[15px] hover:underline block text-center">
-        Try another way
-      </button>
-    </div>
+    </footer>
 
-  </div>
+</div>
 
 </body>
 </html>
